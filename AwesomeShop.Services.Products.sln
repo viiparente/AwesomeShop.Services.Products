@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeShop.Services.Products", "AwesomeShop.Services.Products\AwesomeShop.Services.Products.csproj", "{27F0DA08-4078-4717-A6B7-147EA4AC5901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeShop.Services.Products.Api", "AwesomeShop.Services.Products\AwesomeShop.Services.Products.Api.csproj", "{27F0DA08-4078-4717-A6B7-147EA4AC5901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeShop.Services.Products.Core", "AwesomeShop.Services.Products.Core\AwesomeShop.Services.Products.Core.csproj", "{EF282779-44C5-44CC-BE56-BFD05D7112B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeShop.Services.Products.Application", "AwesomeShop.Services.Products.Application\AwesomeShop.Services.Products.Application.csproj", "{710A743D-F4C2-496D-B192-099FB906A30A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeShop.Services.Products.Infrastructure", "AwesomeShop.Services.Products.Infrastructure\AwesomeShop.Services.Products.Infrastructure.csproj", "{F2E9E40F-EDCF-410B-BBFA-970DEDED17CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{27F0DA08-4078-4717-A6B7-147EA4AC5901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27F0DA08-4078-4717-A6B7-147EA4AC5901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27F0DA08-4078-4717-A6B7-147EA4AC5901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF282779-44C5-44CC-BE56-BFD05D7112B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF282779-44C5-44CC-BE56-BFD05D7112B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF282779-44C5-44CC-BE56-BFD05D7112B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF282779-44C5-44CC-BE56-BFD05D7112B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710A743D-F4C2-496D-B192-099FB906A30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710A743D-F4C2-496D-B192-099FB906A30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710A743D-F4C2-496D-B192-099FB906A30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710A743D-F4C2-496D-B192-099FB906A30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E9E40F-EDCF-410B-BBFA-970DEDED17CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E9E40F-EDCF-410B-BBFA-970DEDED17CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E9E40F-EDCF-410B-BBFA-970DEDED17CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E9E40F-EDCF-410B-BBFA-970DEDED17CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

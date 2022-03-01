@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Handlers\" />
+    <Folder Include="Dtos\ViewModels\" />
+    <Folder Include="Queries\Handlers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AwesomeShop.Services.Products.Core\AwesomeShop.Services.Products.Core.csproj" />
+    <ProjectReference Include="..\AwesomeShop.Services.Products.Infrastructure\AwesomeShop.Services.Products.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
