@@ -1,9 +1,10 @@
 ﻿using System;
+using AwesomeShop.Services.Products.Core.Events;
 using AwesomeShop.Services.Products.Core.ValueObjects;
 
 namespace AwesomeShop.Services.Products.Core.Entities
 {
-    public class Product
+    public class Product : AggregateRoot
     {
         public Product(string title, string description, decimal price, int quantity, Category category)
         {
@@ -32,6 +33,8 @@ namespace AwesomeShop.Services.Products.Core.Entities
 
             Description = description;
             Price = price;
+
+            AddEvent(new ProductUpdated(Id));
         }
 
         public static Product Create(string title, string description, decimal price, int quantity, Category category)
