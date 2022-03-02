@@ -1,33 +1,38 @@
-﻿using AwesomeShop.Services.Products.Core.Entities;
-using AwesomeShop.Services.Products.Core.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using AwesomeShop.Services.Products.Core.Entities;
+using AwesomeShop.Services.Products.Core.Repositories;
+using MongoDB.Driver;
 
 namespace AwesomeShop.Services.Products.Infrastructure.Persistence.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        public Task AddAsync(Product product)
+        private readonly IMongoCollection<Product> _collection;
+        public ProductRepository(IMongoDatabase database)
         {
-            throw new NotImplementedException();
+            _collection = database.GetCollection<Product>("products");
         }
 
-        public Task<List<Product>> GetAllAsync()
+        public async Task AddAsync(Product product)
         {
-            throw new NotImplementedException();
+            await _collection.InsertOneAsync(product);
         }
 
-        public Task<Product> GetByIdAsync(Guid id)
+        public async Task<List<Product>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _collection.Find(c => true).ToListAsync();
         }
 
-        public Task UpdateAsync(Product product)
+        public async Task<Product> GetByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await _collection.Find(c => c.Id == id).SingleOrDefaultAsync();
+        }
+
+        public async Task UpdateAsync(Product product)
+        {
+            await _collection.ReplaceOneAsync(c => c.Id == product.Id, product);
         }
     }
 }
