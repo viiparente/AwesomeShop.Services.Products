@@ -1,3 +1,4 @@
+using AwesomeShop.Services.Products.Application;
 using AwesomeShop.Services.Products.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,8 @@ namespace AwesomeShop.Services.Products
         {
             services
                 .AddMongo()
-                .AddRepositories();
+                .AddRepositories()
+                .AddHandlers();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
